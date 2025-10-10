@@ -18,6 +18,7 @@ This is an opinionated package that defines levels of the architecture and the d
 - [How it works](#How-it-works)
     - [Levels](#Levels)
     - [Define a level inside the project](#Define-a-level-inside-the-project)
+- [CI/CD](#CICD)
 
 
 ## Installation
@@ -28,7 +29,7 @@ You can install the package via composer:
 composer require giacomomasseron/php-clean-architecture
 ```
 
-After the installation, you must run the install command to publish the deptrac file to your root folder:
+After the installation, you must run the *install* command to publish *deptrac.yaml* file to your root folder:
 ```bash
 vendor/bin/php-clean-architecture install
 ```
@@ -99,6 +100,16 @@ For example, in a Laravel project, if you want your controller to be part of the
 ```php
 public class YourController extends Controller implements GiacomoMasseroni\PHPCleanArchitecture\Contracts\ControllerInterface
 ```
+
+## CI/CD
+
+If you want to check the architecture levels in your CI/CD pipeline, you can use the following command:
+
+```bash
+vendor/bin/php-clean-architecture check
+```
+
+This command will stop your pipeline if there are architecture violations, based on the deptrac configuration file.
 
 ## Testing
 
