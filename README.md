@@ -34,7 +34,6 @@ After the installation, you must run the *install* command to publish *deptrac.y
 vendor/bin/php-clean-architecture install
 ```
 
-
 ## Why Clean Code?
 
 Why not?  
