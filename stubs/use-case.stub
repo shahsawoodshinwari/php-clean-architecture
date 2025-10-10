@@ -1,0 +1,13 @@
+<?php
+
+namespace {{namespace}};
+
+use GiacomoMasseroni\PHPCleanArchitecture\BaseUseCase;
+
+class {{useCaseName}} extends BaseUseCase
+{
+    public function handle(...$arguments): mixed
+    {
+        // TODO
+    }
+}

@@ -12,6 +12,8 @@ return (new PhpCsFixer\Config())
         '@PHP82Migration' => true,
         'no_unused_imports' => true,
         'ordered_imports' => true,
+        'declare_strict_types' => true,
     ])
+    ->setRiskyAllowed(true)
     ->setFinder($finder)
     ;

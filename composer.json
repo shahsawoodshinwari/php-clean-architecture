@@ -21,8 +21,6 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {
-    },
     "require-dev": {
         "pestphp/pest": "^3.0",
         "pestphp/pest-plugin-arch": "^3.0",
@@ -32,8 +30,13 @@
         "phpstan/phpstan-phpunit": "^2.0",
         "rector/rector": "^2.0",
         "phpstan/phpstan": "2.1.x-dev",
-        "friendsofphp/php-cs-fixer": "dev-master"
+        "friendsofphp/php-cs-fixer": "dev-master",
+        "deptrac/deptrac": "3.0.x-dev",
+        "composer/composer": "^2.9@dev"
     },
+    "bin": [
+        "php-clean-architecture"
+    ],
     "scripts": {
         "analyse": "vendor/bin/phpstan analyse",
         "test-coverage": "vendor/bin/pest --coverage",
@@ -41,7 +44,7 @@
         "refactor": "rector",
         "test:lint": "php-cs-fixer check src",
         "test:refactor": "rector --dry-run",
-        "test:types": "phpstan analyse -l 6 src",
+        "test:types": "phpstan analyse src",
         "test:arch": "pest --filter=arch",
         "test:type-coverage": "pest --type-coverage --min=100",
         "test:unit": "pest",
@@ -51,6 +54,11 @@
             "@test:types",
             "@test:unit"
         ]
+    },
+    "extra": {
+        "copy-file": {
+            "vendor/giacomomasseron/php-clean-architecture/deptrac.yaml": "deptrac.yaml"
+        }
     },
     "config": {
         "allow-plugins": {

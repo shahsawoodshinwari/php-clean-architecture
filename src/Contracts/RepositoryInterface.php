@@ -4,7 +4,4 @@ declare(strict_types=1);
 
 namespace GiacomoMasseroni\PHPCleanArchitecture\Contracts;
 
-interface UseCaseInterface
-{
-    public function handle(mixed ...$arguments): mixed;
-}
+interface RepositoryInterface {}
