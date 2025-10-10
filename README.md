@@ -18,6 +18,7 @@ This is an opinionated package that defines levels of the architecture and the d
 - [How it works](#How-it-works)
     - [Levels](#Levels)
     - [Define a level inside the project](#Define-a-level-inside-the-project)
+    - [UseCases](#UseCases)
 - [CI/CD](#CICD)
 
 
@@ -102,11 +103,33 @@ final public class ThirdPartyService
 ```
 
 
-For example, in a Laravel project, if you want your controller to be part of the Controller level:
+If you want your controller to be part of the Controller level, you need to implement the ControllerInterface.  
+For example:
 
 ```php
-public class YourController extends Controller implements GiacomoMasseroni\PHPCleanArchitecture\Contracts\ControllerInterface
+use GiacomoMasseroni\PHPCleanArchitecture\Contracts\ControllerInterface;
+
+public class YourController implements ControllerInterface
 ```
+
+### UseCases
+
+When you create a UseCase, you need the class extends the BaseUseCase class, and you need to implement the UseCaseInterface.  
+For example:
+
+```php
+use GiacomoMasseroni\PHPCleanArchitecture\BaseUseCase;
+use GiacomoMasseroni\PHPCleanArchitecture\Contracts\UseCaseInterface;
+
+public class DoSomething extends BaseUseCase implements UseCaseInterface
+{
+    public function handle(...$arguments): mixed
+    {
+        //
+    }
+}
+```
+
 
 ## CI/CD
 
