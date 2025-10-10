@@ -16,6 +16,7 @@ This is an opinionated package that defines levels of the architecture and the d
     - [UseCase](#UseCase)
     - [Architecture Level](#Architecture-Level)
 - [How it works](#How-it-works)
+    - [Levels](#Levels)
     - [Define a level inside the project](#Define-a-level-inside-the-project)
 
 
@@ -55,6 +56,9 @@ In the Clean Architecture, a level is a layer of the architecture with a specifi
 ## How it works
 
 The package uses [deptrac](https://github.com/deptrac/deptrac) to define the levels and to check the dependencies between them.  
+
+### Levels
+
 These are the levels defined:
 
 - Entity
@@ -77,6 +81,9 @@ The *Entity* level must not depend on any other level.
 The *Repository* level can only depend on *Entity* or *Service* levels.  
 The *UseLevel* level can only depend on *Repository* or *Service* levels.  
 The *Controller* level can only depend on *UseCase* levels.
+
+**What is Service level?**  
+The Service level can be used for third part tools or libraries.
 
 ### Define a level inside the project
 
