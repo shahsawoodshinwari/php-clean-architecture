@@ -94,6 +94,14 @@ The package comes with these interfaces:
 - **UseCaseInterface**: implements this interface if the class belongs to UseCase level.
 - **ControllerInterface**: implements this interface if the class belongs to Controller level.
 
+For classes that belong to the Service level, you need the class name must contains the *Service* word.  
+For example:  
+
+```php
+final public class ThirdPartyService
+```
+
+
 For example, in a Laravel project, if you want your controller to be part of the Controller level:
 
 ```php
