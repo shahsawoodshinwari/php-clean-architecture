@@ -35,7 +35,8 @@
         "composer/composer": "^2.9@dev"
     },
     "bin": [
-        "php-clean-architecture"
+        "php-clean-architecture",
+        "vendor/bin/deptrac"
     ],
     "scripts": {
         "analyse": "vendor/bin/phpstan analyse",
