@@ -1,12 +1,28 @@
 #!/usr/bin/env php
-<?php
-
-declare(strict_types=1);
+<?php declare(strict_types=1);
 
 use GiacomoMasseroni\PHPCleanArchitecture\Application;
 
 if (!ini_get('date.timezone')) {
     ini_set('date.timezone', 'UTC');
 }
+
+if (isset($GLOBALS['_composer_autoload_path'])) {
+    define('PHP_CLEAN_ARCHITECTURE_COMPOSER_INSTALL', $GLOBALS['_composer_autoload_path']);
+
+    unset($GLOBALS['_composer_autoload_path']);
+} else {
+    foreach ([__DIR__ . '/../../autoload.php', __DIR__ . '/../vendor/autoload.php', __DIR__ . '/vendor/autoload.php'] as $file) {
+        if (file_exists($file)) {
+            define('PHP_CLEAN_ARCHITECTURE_COMPOSER_INSTALL', $file);
+
+            break;
+        }
+    }
+
+    unset($file);
+}
+
+require PHP_CLEAN_ARCHITECTURE_COMPOSER_INSTALL;
 
 exit((new Application())->run($_SERVER['argv']));
