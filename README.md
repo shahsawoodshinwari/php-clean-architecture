@@ -50,6 +50,8 @@ Good examples of use cases are:
 - Register
 - CompleteOrder
 
+**A use case should be a single, very specific action. It shouldn’t do anything more than its name suggests.**
+
 ### Architecture Level
 
 In the Clean Architecture, a level is a layer of the architecture with a specific function, **only connected to the upper level**.
@@ -80,7 +82,7 @@ graph TD;
 
 The *Entity* level must not depend on any other level.  
 The *Repository* level can only depend on *Entity* or *Service* levels.  
-The *UseLevel* level can only depend on *Repository* or *Service* levels.  
+The *UseCase* level can only depend on *Repository* or *Service* levels.  
 The *Controller* level can only depend on *UseCase* levels.
 
 **What is Service level?**  
