@@ -11,6 +11,7 @@ Implements Clean Architecture as described by Robert C. Martin (Uncle Bob) here:
 This is an opinionated package that defines levels of the architecture and the dependencies between them.
 
 - [Installation](#installation)
+- [Getting started](#Getting-started)
 - [Why Clean Code](#Why-Clean-Code)
 - [Concepts](#Concepts)
     - [UseCase](#UseCase)
@@ -33,6 +34,14 @@ composer require giacomomasseron/php-clean-architecture
 After the installation, you must run the *install* command to publish *deptrac.yaml* file to your root folder:
 ```bash
 vendor/bin/php-clean-architecture install
+```
+
+## Getting started
+
+To check the architecture levels in your project, you can use the following command:
+
+```bash
+vendor/bin/php-clean-architecture check
 ```
 
 ## Why Clean Code?
