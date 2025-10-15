@@ -21,6 +21,9 @@
         }
     ],
     "minimum-stability": "dev",
+    "require": {
+      "deptrac/deptrac": "4.2.1"
+    },
     "require-dev": {
         "pestphp/pest": "^3.0",
         "pestphp/pest-plugin-arch": "^3.0",
@@ -31,12 +34,11 @@
         "rector/rector": "^2.0",
         "phpstan/phpstan": "2.1.x-dev",
         "friendsofphp/php-cs-fixer": "dev-master",
-        "deptrac/deptrac": "4.2.1",
         "composer/composer": "^2.9@dev"
     },
     "bin": [
         "php-clean-architecture",
-        "vendor/bin/deptrac"
+        "bin/deptrac"
     ],
     "scripts": {
         "analyse": "vendor/bin/phpstan analyse",
