@@ -38,7 +38,7 @@ vendor/bin/php-clean-architecture install
 
 ## Getting started
 
-To check the architecture levels in your project, you can use the following command:
+To check the architecture levels in your project, use the following command:
 
 ```bash
 vendor/bin/php-clean-architecture check
