@@ -16,7 +16,6 @@ This is an opinionated package that defines levels of the architecture and the d
 - [Concepts](#Concepts)
     - [Architecture Level](#Architecture-Level)
     - [UseCase](#UseCase)
-- [Rule of thumb](#Rule-of-thumb)
 - [How it works](#How-it-works)
     - [Levels](#Levels)
     - [Define a level inside the project](#Define-a-level-inside-the-project)
@@ -56,6 +55,10 @@ It is a well-known, well-structured architecture system.
 
 In the Clean Architecture, a level is a layer of the architecture with a specific function, **only connected to the upper level**.
 
+The rule of thumb of the Clean Architecture is:  
+**An inner circle must never know anything about the circles around it**.
+
+
 ### UseCase
 
 UseCase is a concept of Use Cases level.  
@@ -68,11 +71,6 @@ Good examples of use cases are:
 - UpdateProfile
 
 **A use case should be a single, very specific action. It shouldn’t do anything more than its name suggests.**
-
-## Rule of thumb
-
-The rule of thumb of the Clean Architecture is:  
-**An inner circle must never know anything about the circles around it**.
 
 ## How it works
 
