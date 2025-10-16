@@ -92,14 +92,14 @@ These are the dependencies between the levels:
 graph TD
 
     %% --- LAYERS ---
-    Http["🌐 Http Layer (Controllers, Requests, Resources)"]
-    Providers["🧩 Providers Layer"]
-    Services["🧠 Services Layer"]
-    Repositories["💾 Repositories Layer"]
-    Domain["🏗️ Domain Layer (Core Logic, Entities, Value Objects)"]
-    Models["📦 Models Layer (Eloquent)"]
-    Support["🧰 Support Layer (Helpers, Traits, Utilities)"]
-    Console["🖥️ Console Layer (Commands, Schedules)"]
+    Http["Http Layer (Controllers, Requests, Resources)"]
+    Providers["Providers Layer"]
+    Services["Services Layer"]
+    Repositories["Repositories Layer"]
+    Domain["Domain Layer (Core Logic, Entities, Value Objects)"]
+    Models["Models Layer (Eloquent)"]
+    Support["Support Layer (Helpers, Traits, Utilities)"]
+    Console["Console Layer (Commands, Schedules)"]
 
     %% --- ALLOWED DEPENDENCIES ---
     Http --> Services
