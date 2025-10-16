@@ -148,6 +148,12 @@ public class DoSomething extends BaseUseCase implements UseCaseInterface
 }
 ```
 
+To execute the UseCase, you need to call the *run* method defined in the BaseUseCase class:
+
+```php
+DoSomething::run($arg1, $arg2);
+```
+
 
 ## CI/CD
 
