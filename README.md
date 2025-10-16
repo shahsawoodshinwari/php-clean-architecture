@@ -89,11 +89,36 @@ These are the levels defined:
 These are the dependencies between the levels:
 
 ```mermaid
-graph TD;
-    Controller-->UseCase-->Repository;
-    UseCase-->Service;
-    Repository-->Service;
-    Repository-->Entity;
+graph TD
+
+    %% --- LAYERS ---
+    Http["🌐 Http Layer (Controllers, Requests, Resources)"]
+    Providers["🧩 Providers Layer"]
+    Services["🧠 Services Layer"]
+    Repositories["💾 Repositories Layer"]
+    Domain["🏗️ Domain Layer (Core Logic, Entities, Value Objects)"]
+    Models["📦 Models Layer (Eloquent)"]
+    Support["🧰 Support Layer (Helpers, Traits, Utilities)"]
+    Console["🖥️ Console Layer (Commands, Schedules)"]
+
+    %% --- ALLOWED DEPENDENCIES ---
+    Http --> Services
+    Http --> Providers
+
+    Providers --> Services
+    Providers --> Domain
+
+    Services --> Repositories
+    Services --> Models
+    Services --> Domain
+    Services --> Support
+
+    Repositories --> Models
+    Repositories --> Domain
+
+    Domain --> Support
+
+    Console --> Services
 ```
 
 The *Entity* level must not depend on any other level.  
